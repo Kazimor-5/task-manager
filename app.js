@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const connectDB = require('./db/connect');
+const connectDB = require('./server/db/connect');
 require('dotenv').config();
-const errorHandlerMiddleware = require('./middleware/error-handler');
+const errorHandlerMiddleware = require('./server/middleware/error-handler');
 
-const tasks = require('./routes/tasks');
+const tasks = require('./server/routes/tasks');
 
 app.use(express.static('./public'));
 app.use(express.json());
